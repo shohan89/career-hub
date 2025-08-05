@@ -16,7 +16,7 @@ const FeaturedJobs = () => {
     return (
         <div>
             <SectionTittle tittle={`Featured Jobs: ${featuredJobs.length}`} subTittle={'Explore thousands of job opportunities with all the information you need. Its your future'} />
-            <div>
+            <div className='grid grid-cols-2 gap-6'>
                 {
                     featuredJobs.map(featuredJob => <JobCard 
                         key={featuredJob.id} 
