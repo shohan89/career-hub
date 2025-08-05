@@ -1,9 +1,10 @@
+import Link from "daisyui/components/link";
 import { CiDollar } from "react-icons/ci";
 import { GrLocation } from "react-icons/gr";
 import JobTypeButton from "./JobTypeButton";
 
 const JobCard = ({ featuredJob }) => {
-    const { logo, job_title, 
+    const { id, logo, job_title, 
         company_name, remote_or_onsite, 
         location,job_type, salary } = featuredJob;
     return (
@@ -25,7 +26,7 @@ const JobCard = ({ featuredJob }) => {
                     <p className="flex justify-center items-center"><CiDollar /> {salary}</p>
                 </div>
                 <div className="card-actions">
-                <button className="btn btn-primary">View Details</button>
+                    <Link to={`/job/${id}`}><button className="btn btn-primary">View Details</button></Link>
                 </div>
             </div>
         </div>
