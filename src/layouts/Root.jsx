@@ -5,8 +5,10 @@ import Nav from '../components/Nav';
 const Root = () => {
     return (
         <div>
-            <Nav />
-            <Outlet />
+            <div className='max-w-7xl mx-auto'>
+                <Nav />
+                <Outlet />
+            </div>
             <Footer />
         </div>
     );
