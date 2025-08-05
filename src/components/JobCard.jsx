@@ -1,3 +1,5 @@
+import { CiDollar } from "react-icons/ci";
+import { GrLocation } from "react-icons/gr";
 import JobTypeButton from "./JobTypeButton";
 
 const JobCard = ({ featuredJob }) => {
@@ -18,9 +20,9 @@ const JobCard = ({ featuredJob }) => {
                     <JobTypeButton buttonText={remote_or_onsite} />
                     <JobTypeButton buttonText={job_type} />
                 </div>
-                <div className="flex">
-                    <p>{location}</p>
-                    <p>{salary}</p>
+                <div className="flex text-gray-600 text-[20px] gap-4 mb-6">
+                    <p className="flex justify-center items-center"><GrLocation /> {location}</p>
+                    <p className="flex justify-center items-center"><CiDollar /> {salary}</p>
                 </div>
                 <div className="card-actions">
                 <button className="btn btn-primary">View Details</button>
