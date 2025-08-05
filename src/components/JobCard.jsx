@@ -1,3 +1,4 @@
+import JobTypeButton from "./JobTypeButton";
 
 const JobCard = ({ featuredJob }) => {
     const { logo, job_tittle, 
@@ -13,6 +14,10 @@ const JobCard = ({ featuredJob }) => {
             <div className="card-body">
                 <h2 className="card-title">{job_tittle}</h2>
                 <p>{company_name}</p>
+                <div className="flex gap-4">
+                    <JobTypeButton buttonText={remote_or_onsite} />
+                    <JobTypeButton buttonText={job_type} />
+                </div>
                 <div className="card-actions">
                 <button className="btn btn-primary">View Details</button>
                 </div>
